@@ -1,0 +1,28 @@
+#
+# Copyright (C) 2016+ AzerothCore <www.azerothcore.org>, released under GNU AGPL v3 license: https://github.com/azerothcore/azerothcore-wotlk/blob/master/LICENSE-AGPL3
+#
+
+[worldserver]
+
+########################################
+# mod-mskill configuration
+########################################
+#
+#    Mskill.Enable
+#        Description: Master switch for the mskill command.
+#        Default:     1 - Enabled
+#                     0 - Disabled
+#
+
+Mskill.Enable = 1
+
+#
+#    Mskill.MaxProfessionSkill
+#        Description: Maximum profession skill the "mskill profession learn"
+#                     command is allowed to reach. The module enforces a hard
+#                     ceiling of 300; values higher than 300 are clamped down
+#                     to 300, values lower than 300 are honoured as-is.
+#        Default:     300
+#
+
+Mskill.MaxProfessionSkill = 300
