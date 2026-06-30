@@ -528,22 +528,7 @@ public:
     }
 };
 
-class MskillWorldScript : public WorldScript
-{
-public:
-    MskillWorldScript() : WorldScript("MskillWorldScript", {
-        WORLDHOOK_ON_BEFORE_CONFIG_LOAD
-    }) { }
-
-    void OnBeforeConfigLoad(bool /*reload*/) override
-    {
-        std::string const confPath = _CONF_DIR;
-        sConfigMgr->LoadMore((confPath + "/mod_mskill.conf").c_str());
-    }
-};
-
 void AddMskillScripts()
 {
-    new MskillWorldScript();
     new MskillPlayerScript();
 }
