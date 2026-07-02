@@ -316,8 +316,8 @@ private:
     // Whisper a single line of feedback to the owner, attributed to the bot.
     static void Tell(Player* owner, Player* bot, std::string const& message)
     {
-        ChatHandler(owner->GetSession()).PSendSysMessage("|cff00ff00[%s]|r %s",
-            bot->GetName().c_str(), message.c_str());
+        ChatHandler(owner->GetSession()).PSendSysMessage("|cff00ff00[{}]|r {}",
+            bot->GetName(), message);
     }
 
     static void ReportProfessions(Player* owner, Player* bot)
